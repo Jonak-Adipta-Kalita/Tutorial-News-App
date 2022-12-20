@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     <div className="">
       <Head>
         <title>JAK News App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className=""></div>
     </div>
