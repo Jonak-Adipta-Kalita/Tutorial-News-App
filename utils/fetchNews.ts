@@ -14,7 +14,7 @@ const fetchNews = async (
     ) {
       myQuery(
         access_key: $access_key
-        countries: $categories
+        categories: $categories
         countries: "us,gb,in"
         sort: "published_desc"
         limit: "100"
@@ -54,7 +54,7 @@ const fetchNews = async (
     body: JSON.stringify({
       query,
       variables: {
-        access_key: process.env.MEDIASTACK_API_KEY,
+        access_key: process.env.MEDIA_STACK_API_KEY,
         categories: category,
         keywords,
       },
