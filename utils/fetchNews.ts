@@ -7,7 +7,7 @@ const fetchNews = async (
   keywords?: string,
   isDynamic?: boolean
 ) => {
-  const USE_DUMMY_DATA = true;
+  const USE_DUMMY_DATA = false;
 
   if (!USE_DUMMY_DATA) {
     const query = gql`
