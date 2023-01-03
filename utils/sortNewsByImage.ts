@@ -3,10 +3,14 @@ export default (news: NewsResponse) => {
   const newsWithoutImages = news.data.filter(
     (article) => article.image === null
   );
+  const articles = [...newsWithImages, ...newsWithoutImages];
 
   const sortedNewsResponse = {
     ...news,
-    data: [...newsWithImages, ...newsWithoutImages],
+    data: articles.filter(
+      (item, index, self) =>
+        index === self.findIndex((t) => t.title === item.title)
+    ),
   };
 
   return sortedNewsResponse;
