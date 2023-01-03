@@ -1,3 +1,4 @@
+import LiveTimestamp from "./LiveTimestamp";
 import ReadMoreButton from "./ReadMoreButton";
 
 type Props = {
@@ -23,7 +24,7 @@ const Article = ({ article }: Props) => {
           </section>
           <footer className="text-xs text-right ml-auto flex space-x-1 pt-5 italic text-gray-400">
             <p className="">{article.source} -</p>
-            <p className="">{article.published_at}</p>
+            <LiveTimestamp time={article.published_at} />
           </footer>
         </div>
         <ReadMoreButton article={article} />
